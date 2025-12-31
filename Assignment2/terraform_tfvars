@@ -1,0 +1,12 @@
+backend_servers = [
+  {
+    name        = "backend1"
+    script_path = "/var/www/html"
+  },
+  {
+    name        = "backend2"
+    script_path = "/var/www/html"
+  }
+]
+
+my_ip = "103.113.101.69/32"

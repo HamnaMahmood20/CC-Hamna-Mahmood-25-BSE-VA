@@ -1,0 +1,92 @@
+{
+  "backend_public_ips": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "web-1": "string",
+        "web-2": "string",
+        "web-3": "string"
+      }
+    ],
+    "value": {
+      "web-1": "3.29.33.6",
+      "web-2": "3.29.125.165",
+      "web-3": "3.28.133.115"
+    }
+  },
+  "backend_servers_info": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "web-1": [
+          "object",
+          {
+            "instance_id": "string",
+            "private_ip": "string",
+            "public_ip": "string"
+          }
+        ],
+        "web-2": [
+          "object",
+          {
+            "instance_id": "string",
+            "private_ip": "string",
+            "public_ip": "string"
+          }
+        ],
+        "web-3": [
+          "object",
+          {
+            "instance_id": "string",
+            "private_ip": "string",
+            "public_ip": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "web-1": {
+        "instance_id": "i-01b0026b0394a0b56",
+        "private_ip": "10.0.10.63",
+        "public_ip": "3.29.33.6"
+      },
+      "web-2": {
+        "instance_id": "i-06a6d1c601e3e9e60",
+        "private_ip": "10.0.10.239",
+        "public_ip": "3.29.125.165"
+      },
+      "web-3": {
+        "instance_id": "i-0fa9d64afed5822d6",
+        "private_ip": "10.0.10.234",
+        "public_ip": "3.28.133.115"
+      }
+    }
+  },
+  "configuration_guide": {
+    "sensitive": false,
+    "type": "string",
+    "value": "    \n========================================\nDEPLOYMENT SUCCESSFUL! \n========================================\n    \nNext Steps:\n1. SSH into Nginx server: ssh ec2-user@158.252.33.74\n2. Edit Nginx config: sudo vim /etc/nginx/nginx.conf\n3. Update backend IPs in upstream block: \n   - BACKEND_IP_1: 10.0.10.63\n   - BACKEND_IP_2: 10.0.10.239\n   - BACKEND_IP_3: 10.0.10.234\n4. Restart Nginx: sudo systemctl restart nginx\n5. Test: https://158.252.33.74\n    \nBackend Servers:\n- web-1: 3.29.33.6 (private: 10.0.10.63)\n    - web-2: 3.29.125.165 (private: 10.0.10.239)\n    - web-3: 3.28.133.115 (private: 10.0.10.234)\n    \n========================================\n"
+  },
+  "nginx_instance_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "i-09dc2f89d7b6a07a5"
+  },
+  "nginx_public_ip": {
+    "sensitive": false,
+    "type": "string",
+    "value": "158.252.33.74"
+  },
+  "subnet_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "subnet-0a2cee75f0ad691a6"
+  },
+  "vpc_id": {
+    "sensitive": false,
+    "type": "string",
+    "value": "vpc-09822723aed1d2815"
+  }
+}
